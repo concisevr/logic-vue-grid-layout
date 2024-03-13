@@ -399,8 +399,11 @@
                         let leastX = Infinity,
                         leastY = Infinity;
                         collisions.forEach(layoutItem => {
-                        if (layoutItem.x > l.x) leastX = Math.min(leastX, layoutItem.x);
-                        if (layoutItem.y > l.y) leastY = Math.min(leastY, layoutItem.y);
+                        /* logic 修改 兼容多行 多列 resize碰撞元素后的w,h计算 */
+                        if (layoutItem.x > l.x && layoutItem.y > (l.y + l.h)) leastX = Math.min(leastX, layoutItem.x);
+                        if (layoutItem.y > l.y && layoutItem.x > (l.x + l.w)) leastY = Math.min(leastY, layoutItem.y);
+                        // if (layoutItem.x > l.x) leastX = Math.min(leastX, layoutItem.x);
+                        // if (layoutItem.y > l.y) leastY = Math.min(leastY, layoutItem.y);
                         });
 
                         if (Number.isFinite(leastX)) l.w = leastX - l.x;
