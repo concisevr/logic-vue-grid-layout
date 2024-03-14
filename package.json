@@ -1,6 +1,6 @@
 {
   "name": "logic-vue-grid-layout",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "A draggable and resizable grid layout, as a Vue component.   ====> brfore version: 2.4.0",
   "keywords": [
     "grid",
