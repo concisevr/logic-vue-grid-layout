@@ -215,6 +215,7 @@
                 document.getElementById("grid-layout").style.transform = "scale(1)";
             },
             removeItem: function(i) {
+                /* eslint-disable */
                 console.log("### REMOVE " + i);
                 const index = this.layout.map(item => item.i).indexOf(i);
                 this.layout.splice(index, 1);
@@ -229,6 +230,7 @@
             addItemDynamically: function() {
                 const x = (this.layout.length * 2) % (this.colNum || 12);
                 const y = this.layout.length + (this.colNum || 12);
+                /* eslint-disable */
                 console.log("X=" + x + " Y=" + y)
                 let item = {
                   x: x,
@@ -241,18 +243,23 @@
                 this.layout.push(item);
             },
             move: function(i, newX, newY){
+                /* eslint-disable */
                 console.log("MOVE i=" + i + ", X=" + newX + ", Y=" + newY);
             },
             resize: function(i, newH, newW, newHPx, newWPx){
+                /* eslint-disable */
                 console.log("RESIZE i=" + i + ", H=" + newH + ", W=" + newW + ", H(px)=" + newHPx + ", W(px)=" + newWPx);
             },
             moved: function(i, newX, newY){
+                /* eslint-disable */
                 console.log("### MOVED i=" + i + ", X=" + newX + ", Y=" + newY);
             },
             resized: function(i, newH, newW, newHPx, newWPx){
+                /* eslint-disable */
                 console.log("### RESIZED i=" + i + ", H=" + newH + ", W=" + newW + ", H(px)=" + newHPx + ", W(px)=" + newWPx);
             },
             containerResized: function(i, newH, newW, newHPx, newWPx){
+                /* eslint-disable */
                 console.log("### CONTAINER RESIZED i=" + i + ", H=" + newH + ", W=" + newW + ", H(px)=" + newHPx + ", W(px)=" + newWPx);
             },
             /**
@@ -271,21 +278,27 @@
             },
 
             layoutCreatedEvent: function(newLayout){
+                /* eslint-disable */
                 console.log("Created layout: ", newLayout)
             },
             layoutBeforeMountEvent: function(newLayout){
+                /* eslint-disable */
                 console.log("beforeMount layout: ", newLayout)
             },
             layoutMountedEvent: function(newLayout){
+                /* eslint-disable */
                 console.log("Mounted layout: ", newLayout)
             },
             layoutReadyEvent: function(newLayout){
+                /* eslint-disable */
                 console.log("Ready layout: ", newLayout)
             },
             layoutUpdatedEvent: function(newLayout){
+                /* eslint-disable */
                 console.log("Updated layout: ", newLayout)
             },
             breakpointChangedEvent: function(newBreakpoint, newLayout){
+                /* eslint-disable */
                 console.log("breakpoint changed breakpoint=", newBreakpoint, ", layout: ", newLayout );
             }
 

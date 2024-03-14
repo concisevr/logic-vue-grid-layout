@@ -35,6 +35,7 @@
             }
         },
         mounted: function() {
+            /* eslint-disable */
             console.log("### " + this.text + " ready!");
         },
     }
